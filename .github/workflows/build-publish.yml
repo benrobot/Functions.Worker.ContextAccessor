@@ -16,14 +16,14 @@ jobs:
 #      run: dotnet test --configuration Release --no-build --verbosity normal --logger "console;verbosity=detailed"
     - name: Pack Functions.Worker.ContextAccessor
       run: dotnet pack --configuration Release --no-build --include-symbols --verbosity normal Functions.Worker.ContextAccessor/Functions.Worker.ContextAccessor.csproj
-#    - name: Upload Functions.Worker.ContextAccessor artifacts
-#      uses: actions/upload-artifact@v2
-#      with:
-#        path: |
-#          ./Functions.Worker.ContextAccessor/bin/Release/*.nupkg
-#    - name: Publish Functions.Worker.ContextAccessor package
-#      uses: brandedoutcast/publish-nuget@v2.5.5
-#      with:
-#        PACKAGE_NAME: Functions.Worker.ContextAccessor
-#        PROJECT_FILE_PATH: ./Functions.Worker.ContextAccessor/Functions.Worker.ContextAccessor.csproj
-#        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+    - name: Upload Functions.Worker.ContextAccessor artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        path: |
+          ./Functions.Worker.ContextAccessor/bin/Release/*.nupkg
+    - name: Publish Functions.Worker.ContextAccessor package
+      uses: brandedoutcast/publish-nuget@v2.5.5
+      with:
+        PACKAGE_NAME: Functions.Worker.ContextAccessor
+        PROJECT_FILE_PATH: ./Functions.Worker.ContextAccessor/Functions.Worker.ContextAccessor.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
