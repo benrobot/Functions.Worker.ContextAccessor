@@ -22,7 +22,7 @@ jobs:
         path: |
           ./Functions.Worker.ContextAccessor/bin/Release/*.nupkg
     - name: Publish Functions.Worker.ContextAccessor package
-      uses: brandedoutcast/publish-nuget@v2.5.5
+      uses: alirezanet/publish-nuget@v3.0.4
       with:
         PACKAGE_NAME: Functions.Worker.ContextAccessor
         PROJECT_FILE_PATH: ./Functions.Worker.ContextAccessor/Functions.Worker.ContextAccessor.csproj
